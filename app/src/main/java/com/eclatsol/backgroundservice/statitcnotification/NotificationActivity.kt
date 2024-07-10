@@ -1,15 +1,15 @@
-package com.eclatsol.backgroundservice
+package com.eclatsol.backgroundservice.statitcnotification
 
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.eclatsol.backgroundservice.service.ForeGroundService
+import com.eclatsol.backgroundservice.R
+import com.eclatsol.backgroundservice.statitcnotification.service.ForeGroundService
 
 class NotificationActivity : AppCompatActivity() {
     val permissionCode = 100
@@ -45,7 +45,7 @@ class NotificationActivity : AppCompatActivity() {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 startForegroundService(Intent(this, ForeGroundService::class.java)) //aa vali method latest android mate use thay che
             }else{
-                startService(Intent(this,ForeGroundService::class.java)) //aa vali method juna android mate use thay che
+                startService(Intent(this, ForeGroundService::class.java)) //aa vali method juna android mate use thay che
             }
         }
     }
@@ -66,7 +66,7 @@ class NotificationActivity : AppCompatActivity() {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                         startForegroundService(Intent(this, ForeGroundService::class.java)) //aa vali method latest android mate use thay che
                     }else{
-                        startService(Intent(this,ForeGroundService::class.java)) //aa vali method juna android mate use thay che
+                        startService(Intent(this, ForeGroundService::class.java)) //aa vali method juna android mate use thay che
                     }
                 }
             }

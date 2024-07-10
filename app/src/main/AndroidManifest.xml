@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+
 
     <application
         android:allowBackup="true"
@@ -16,7 +18,16 @@
         android:theme="@style/Theme.BackGroundService"
         tools:targetApi="31">
         <activity
-            android:name=".NotificationActivity"
+            android:name=".ui.ThirdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.FirstActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customnotification.CustomNotificationActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,14 +36,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="false"/>
-        <service
-            android:name=".MyService"
+            android:name=".statitcnotification.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.MainActivity"
             android:exported="false" />
 
-        <service android:name=".service.ForeGroundService"
-            android:exported="false"/>
+        <service
+            android:name=".demo.MyService"
+            android:exported="false" />
+        <service
+            android:name=".statitcnotification.service.ForeGroundService"
+            android:exported="false" />
+        <service
+            android:name=".customnotification.service.CustomForegroundService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".customnotification.broadcastreciver.ButtonReceiver"
+            android:exported="false"
+            android:enabled="true" />
     </application>
 
 </manifest>

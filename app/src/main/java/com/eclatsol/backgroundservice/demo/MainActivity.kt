@@ -1,9 +1,10 @@
-package com.eclatsol.backgroundservice
+package com.eclatsol.backgroundservice.demo
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.eclatsol.backgroundservice.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -226,11 +227,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.btnStartService).setOnClickListener{
-            startService(Intent(this,MyService::class.java))
+            startService(Intent(this, MyService::class.java))
         }
 
         findViewById<Button>(R.id.btnStopService).setOnClickListener{
-            stopService(Intent(this,MyService::class.java))
+            stopService(Intent(this, MyService::class.java))
         }
     }
 }

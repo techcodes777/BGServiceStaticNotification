@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BackGroundService"
+rootProject.name = "NotificationService"
 include(":app")
  

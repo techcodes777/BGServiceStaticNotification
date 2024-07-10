@@ -1,4 +1,4 @@
-package com.eclatsol.backgroundservice.service
+package com.eclatsol.backgroundservice.statitcnotification.service
 
 import android.app.Notification
 import android.app.NotificationChannel

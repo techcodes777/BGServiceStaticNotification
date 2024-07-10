@@ -1,4 +1,4 @@
-package com.eclatsol.backgroundservice
+package com.eclatsol.backgroundservice.demo
 
 import android.app.Service
 import android.content.Intent
